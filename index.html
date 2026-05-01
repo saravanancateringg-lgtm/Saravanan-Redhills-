@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSCATERING Redhills | Premium Catering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom Elegant Theme */
+        :root {
+            --gold: #D4AF37;
+            --dark: #1a1a1a;
+        }
+        .bg-elegant-dark { background-color: #1a1a1a; }
+        .text-gold { color: #D4AF37; }
+        .border-gold { border-color: #D4AF37; }
+        .btn-gold { background-color: #D4AF37; color: #1a1a1a; }
+        .btn-gold:hover { background-color: #bc9b30; }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/2291367/pexels-photo-2291367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-serif">
+
+    <!-- Navigation -->
+    <nav class="bg-elegant-dark shadow-xl sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-3xl font-black text-gold tracking-widest">
+                <strong>SSCATERING</strong>
+                <span class="text-white text-xs block font-light tracking-normal">REDHILLS • CHENNAI</span>
+            </h1>
+            <div class="flex items-center space-x-6">
+                <a href="https://www.instagram.com/saravanan_redhills" target="_blank" class="text-gold hover:text-white transition text-2xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#order" class="hidden md:block border border-gold text-gold px-5 py-2 rounded hover:bg-gold hover:text-black transition font-bold uppercase text-xs">
+                    Inquiry
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section h-[70vh] flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 italic">Taste the Excellence</h2>
+            <p class="text-xl mb-8 font-light tracking-wide">Premium Culinary Experiences by <strong class="text-gold">SSCATERING</strong></p>
+            <a href="#order" class="btn-gold px-10 py-4 rounded-full font-black uppercase tracking-tighter shadow-lg transition transform hover:scale-105">
+                Book Your Event
+            </a>
+        </div>
+    </header>
+
+    <!-- Selection Section -->
+    <section class="py-20 px-6 container mx-auto">
+        <div class="text-center mb-16">
+            <h3 class="text-4xl font-bold text-gray-900 uppercase tracking-widest">Our Royal Menu</h3>
+            <div class="w-24 h-1 bg-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Veg Card -->
+            <div class="relative group overflow-hidden rounded-2xl shadow-2xl">
+                <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-96 object-cover transition duration-500 group-hover:scale-110" alt="Veg Menu">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-8">
+                    <h4 class="text-gold text-3xl font-bold mb-2 uppercase">Premium Veg</h4>
+                    <p class="text-white font-light">Authentic, pure, and rich flavors for the soul.</p>
+                </div>
+            </div>
+
+            <!-- Non-Veg Card -->
+            <div class="relative group overflow-hidden rounded-2xl shadow-2xl">
+                <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-96 object-cover transition duration-500 group-hover:scale-110" alt="Non-Veg Menu">
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-8">
+                    <h4 class="text-gold text-3xl font-bold mb-2 uppercase">Gourmet Non-Veg</h4>
+                    <p class="text-white font-light">Signature Biryanis and exquisite meat delicacies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Page -->
+    <section id="order" class="bg-white py-20 px-6">
+        <div class="max-w-4xl mx-auto border-2 border-gold p-8 md:p-12 rounded-lg">
+            <h3 class="text-3xl font-bold text-center text-gray-900 mb-10 uppercase tracking-widest">Order Details</h3>
+            
+            <form id="orderForm" class="space-y-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="border-b-2 border-gray-200 focus-within:border-gold transition">
+                        <label class="block text-xs uppercase font-bold text-gray-500">Full Name</label>
+                        <input type="text" id="custName" required class="w-full py-3 bg-transparent outline-none text-lg">
+                    </div>
+                    <div class="border-b-2 border-gray-200 focus-within:border-gold transition">
+                        <label class="block text-xs uppercase font-bold text-gray-500">Event Date</label>
+                        <input type="date" id="eventDate" required class="w-full py-3 bg-transparent outline-none">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="border-b-2 border-gray-200 focus-within:border-gold transition">
+                        <label class="block text-xs uppercase font-bold text-gray-500">Food Preference</label>
+                        <select id="foodType" class="w-full py-3 bg-transparent outline-none">
+                            <option>Vegetarian</option>
+                            <option>Non-Vegetarian</option>
+                            <option>Fusion (Both)</option>
+                        </select>
+                    </div>
+                    <div class="border-b-2 border-gray-200 focus-within:border-gold transition">
+                        <label class="block text-xs uppercase font-bold text-gray-500">Quantity (Plates)</label>
+                        <input type="number" id="quantity" required class="w-full py-3 bg-transparent outline-none" placeholder="100">
+                    </div>
+                    <div class="border-b-2 border-gray-200 focus-within:border-gold transition">
+                        <label class="block text-xs uppercase font-bold text-gray-500">Service Quality</label>
+                        <select id="quality" class="w-full py-3 bg-transparent outline-none">
+                            <option>Classic Service</option>
+                            <option>Premium Buffet</option>
+                            <option>Royal VIP Service</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-gray-400 text-sm italic mb-6">* Secure Payment Link will be provided after order confirmation</p>
+                    <button type="button" onclick="sendToWhatsApp()" class="btn-gold w-full md:w-auto px-16 py-4 rounded font-black text-lg uppercase tracking-widest flex items-center justify-center gap-3 mx-auto">
+                        <i class="fab fa-whatsapp text-2xl"></i> Connect with <strong>SSCATERING</strong>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-elegant-dark text-white py-16 px-6">
+        <div class="container mx-auto grid md:grid-cols-2 gap-12 border-b border-gray-800 pb-12">
+            <div>
+                <h4 class="text-3xl font-black text-gold mb-6 uppercase tracking-tighter"><strong>SSCATERING</strong></h4>
+                <p class="text-gray-400 max-w-sm leading-relaxed mb-6">Redhills' most trusted name for quality food. We bring hygiene, taste, and elegance to your table.</p>
+                <a href="https://www.instagram.com/saravanan_redhills" target="_blank" class="text-gold text-3xl"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="space-y-4">
+                <h5 class="text-gold font-bold uppercase tracking-widest mb-4">Location</h5>
+                <p class="flex items-start gap-4 text-gray-300">
+                    <i class="fas fa-map-marker-alt text-gold text-xl"></i>
+                    <span>Rajayogi Street, Gandhinagar,<br>Redhills, Chennai - 600052</span>
+                </p>
+                <p class="flex items-center gap-4 text-gray-300">
+                    <i class="fas fa-phone-alt text-gold"></i>
+                    <span>9444251444</span>
+                </p>
+            </div>
+        </div>
+        <div class="text-center pt-8 text-gray-600 text-xs tracking-widest">
+            DESIGNED FOR <strong>SSCATERING</strong> REDHILLS © 2026
+        </div>
+    </footer>
+
+    <script>
+        function sendToWhatsApp() {
+            const name = document.getElementById('custName').value;
+            const date = document.getElementById('eventDate').value;
+            const type = document.getElementById('foodType').value;
+            const qty = document.getElementById('quantity').value;
+            const qual = document.getElementById('quality').value;
+
+            if(!name || !qty || !date) {
+                alert("Please complete the details for SSCATERING to assist you.");
+                return;
+            }
+
+            const message = `👑 *NEW INQUIRY: SSCATERING*%0A` +
+                            `--------------------------%0A` +
+                            `*Client:* ${name}%0A` +
+                            `*Date:* ${date}%0A` +
+                            `*Type:* ${type}%0A` +
+                            `*Plates:* ${qty}%0A` +
+                            `*Service:* ${qual}%0A` +
+                            `--------------------------%0A` +
+                            `Please provide the premium quote.`;
+
+            window.open(`https://wa.me/919444251444?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
